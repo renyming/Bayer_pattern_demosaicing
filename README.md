@@ -1,6 +1,6 @@
 # Bayer pattern demosaicing
 
-Implemented the simple linear interpolation and freeman interpolation for Bayer pattern mosaicing images.
+Implemented the simple linear interpolation and Freeman interpolation for Bayer pattern mosaicing images.
 
 
 Bayer pattern given in this assignment:
