@@ -4,7 +4,6 @@
 using namespace std;
 using namespace cv;
 
-void printMat(const Mat& mat);
 void showComparison(const String& title, const Mat& orig, const Mat& result);
 void printHelp(const String&);
 void savePatchComparison(const String&, const Mat&, const Mat&, const Mat&);
@@ -162,21 +161,6 @@ void savePatchComparison(const String& title, const Mat& orig, const Mat& result
 	hconcat(cropOriginal, cropResult, patchComparison);
 	hconcat(patchComparison, cropDiff, patchComparison);
 	imwrite(title + ".bmp", patchComparison);
-}
-
-void printMat(const Mat& mat) {
-	int rows = mat.rows;
-	int cols = mat.cols;
-
-	cout << setw(3);
-
-	for (int i = 0; i < rows; ++i) {
-		for (int j = 0; j < cols; ++j) {
-			cout << setw(3) << (int)mat.at<uchar>(i, j) << setw(1) << ' ';
-		}
-		cout << endl;
-	}
-
 }
 
 void printHelp(const String& programName) {
